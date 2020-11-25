@@ -1,5 +1,6 @@
+<script type="text/javascript" src="js/validation.js"></script>
 <form action="dbinsert.php" method="post">
-    <input type="text" class="txt-fld" name="firstname" placeholder="First Name">
+    <input type="text" class="txt-fld" name="firstname" placeholder="First Name" onkeyup=validateFname()>
     <input type="text" class="txt-fld" name="middlename" placeholder="Middle Name">
     <input type="text" class="txt-fld" name="lastname" placeholder="Last Name">
     <input type="text" class="txt-fld" name="contact" placeholder="Phone Number">
