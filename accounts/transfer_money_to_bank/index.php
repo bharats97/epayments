@@ -7,7 +7,6 @@ include("../../resources/header.php");
     <p id="response_message"></p>
     <form action="#" id="bank_transfer">
           <div class="input-field">
-            <!-- receiver name bank name IFSC code account no amount comment -->
             <label for="receiver_name">Receiver Name</label>
             <input type="text" name="receiver_name" id="receiver_name"required />
             <label for="bank_name">Bank Name</label>
