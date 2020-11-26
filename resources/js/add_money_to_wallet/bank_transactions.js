@@ -25,7 +25,7 @@ function validate_data(card_details)
         return false;
     if(amount<0)
         return false;
-    if(year<current_year&&current_month>month)
+    if(year<current_year&&current_month>month||(month>12||month<=0))
         return false;
     return true;
 }

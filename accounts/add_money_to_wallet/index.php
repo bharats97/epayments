@@ -1,5 +1,5 @@
 <?php
-include("../resources/header.php");
+include("../../resources/header.php");
 ?>
 <div class="forms">
 	<h1>Add Money To Wallet</h1>
@@ -40,5 +40,5 @@ include("../resources/header.php");
       </form>
 </div>
 <?php
-include("../resources/footer.php");
+include("../../resources/footer.php");
 ?>
