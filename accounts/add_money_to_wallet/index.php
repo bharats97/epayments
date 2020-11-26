@@ -1,6 +1,8 @@
 <?php
 include("../../resources/header.php");
 ?>
+<script src="../../resources/js/add_money_to_wallet/bank_transactions.js"></script>
+
 <div class="forms">
 	<h1>Add Money To Wallet</h1>
     <ul class="tab-group">

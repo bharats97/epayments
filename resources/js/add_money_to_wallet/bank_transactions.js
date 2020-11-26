@@ -30,18 +30,6 @@ function validate_data(card_details)
     return true;
 }
 $(document).ready(function(){
-    $('.tab a').on('click', function (e) {
-      	e.preventDefault();
-       
-      	$(this).parent().addClass('active');
-      	$(this).parent().siblings().removeClass('active');
-       
-      	var href = $(this).attr('href');
-      	$('.forms > form').hide();
-      	$(href).fadeIn(500);
-    });
-
-
 
     $('#debit_card_expiry_date').on('keypress',function(e){
     	add_slash_in_date($(debit_card_expiry_date));
