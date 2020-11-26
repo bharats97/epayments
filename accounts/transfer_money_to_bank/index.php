@@ -1,6 +1,7 @@
 <?php
 include("../../resources/header.php");
 ?>
+<script src="../../resources/js/transfer_money_to_bank/transfer_money_to_bank.js"></script>
 <div class="forms">
   <h1>Transfer Money To Bank</h1>
   <p id="error_message"></p>
@@ -14,9 +15,9 @@ include("../../resources/header.php");
             <label for="IFSC_code">IFSC Code</label>
             <input type="text" name="IFSC_code" id="IFSC_code"required />
             <label for="amount">Amount</label> 
-            <input type="text" name="amount" id="debit_card_amount" required/>
+            <input type="text" name="amount" id="amount" required/>
             <label for="comment">Comment</label>
-            <input type="text" name="comment" id="comment"required />
+            <input type="text" name="comment" id="comment"/>
             <input type="submit" value="transfer" class="button" id="transfer_money_to_bank"/>
           </div>
       </form>
