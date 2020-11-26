@@ -2,21 +2,23 @@
 include("../../resources/header.php");
 ?>
 <div class="forms">
-	<h1>Transfet Money To Bank</h1>
-	<p id="error_message"></p>
+  <h1>Transfer Money To Bank</h1>
+  <p id="error_message"></p>
     <p id="response_message"></p>
-    <form action="#" id="">
-          <h1>Debit Card</h1>
+    <form action="#" id="bank_transfer">
           <div class="input-field">
-            <label for="credit_card_number">Card Number</label>
-            <input type="text" name="card_number" id="debit_card_number"required />
-            <label for="expiry_date">Expiry Date</label> 
-            <input type="txt" name="expiry_date" placeholder="MM/YY"  id="debit_card_expiry_date" required/>
-            <label for="cvv">CVV</label> 
-            <input type="password" name="cvv" id="debit_card_cvv" required/>
+            <!-- receiver name bank name IFSC code account no amount comment -->
+            <label for="receiver_name">Receiver Name</label>
+            <input type="text" name="receiver_name" id="receiver_name"required />
+            <label for="bank_name">Bank Name</label>
+            <input type="text" name="bank_name" id="bank_name"required />
+            <label for="IFSC_code">IFSC Code</label>
+            <input type="text" name="IFSC_code" id="IFSC_code"required />
             <label for="amount">Amount</label> 
             <input type="text" name="amount" id="debit_card_amount" required/>
-            <input type="submit" value="Add Money" class="button" id="add_using_debit_card"/>
+            <label for="comment">Comment</label>
+            <input type="text" name="comment" id="comment"required />
+            <input type="submit" value="transfer" class="button" id="transfer_money_to_bank"/>
           </div>
       </form>
 
