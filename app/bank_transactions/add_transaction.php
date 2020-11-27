@@ -8,6 +8,3 @@ function addTransaction($connection,$from="NULL",$to="NULL",$sender_name,$receiv
 	}
 	
 }
-
-
-
