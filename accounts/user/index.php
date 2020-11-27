@@ -11,7 +11,8 @@
 			<h2>Profile Card</h2>
 		</div>
 		<div class="usercard" style="background-color: blue">
-			<img src="jhondoe.jpg" alt="John" style="width: 100%">
+			<img src="john_doe.png" alt="John" style="width: 100%">
+
 			<h1 id="username"></h1>
 			<h2 id="contact">Contact: </h2>
 		</div>
