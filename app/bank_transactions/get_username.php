@@ -10,4 +10,4 @@ function getUserName($connection,$user_id)
 		$user_name=$row["first_name"]." ".$row["last_name"];
 	} 
 	return $user_name;
-}	
+}
