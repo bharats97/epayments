@@ -1,8 +1,6 @@
 <?php
 include("../resources/header.php");
 ?>
-<link rel="stylesheet" type="text/css" href="../resources/css/tab_style_form.css"> 
-
 <div class="forms">
     <form action="#" id="login_form">
           <h1>Login</h1>
