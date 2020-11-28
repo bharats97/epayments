@@ -14,9 +14,13 @@
 		<span class="brand-name">E-Pay</span>
 	</a>
 	<div class='space'></div>
-	<a href="#" class='link'>
-        <? if (isset($_SESSION['name'])): ?>
-	  		 <span class='login'><? echo $_SESSION['name']; ?> </span>
-		<? endif; ?>
+    <? if (isset($_SESSION['name'])): ?>
+		<ul class="login nav-menu">
+			<li class="nav-item"><a href="#" class = "link"><? echo $_SESSION['name']; ?></a></li>			
+			<li class="nav-item"><a href="#" class = "link">Logout</a></li>
+		</ul> 
+	<? else : ?>
+		<a href="#" class='login link'>Login</a>
+	<? endif; ?>
     </a>
 </nav>
