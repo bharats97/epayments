@@ -1,5 +1,14 @@
 <?php
+
+session_start();
+
+if (!isset($_SESSION['status'])) {
+    include('../../index.php');
+    exit();
+}
+
 include("../../resources/header.php");
+
 ?>
 <script src="../../resources/js/add_money_to_wallet/bank_transactions.js"></script>
 
@@ -17,11 +26,11 @@ include("../../resources/header.php");
           <div class="input-field">
             <label for="credit_card_number">Card Number</label>
             <input type="text" name="card_number" id="debit_card_number"required />
-            <label for="expiry_date">Expiry Date</label> 
+            <label for="expiry_date">Expiry Date</label>
             <input type="txt" name="expiry_date" placeholder="MM/YY"  id="debit_card_expiry_date" required/>
-            <label for="cvv">CVV</label> 
+            <label for="cvv">CVV</label>
             <input type="password" name="cvv" id="debit_card_cvv" required/>
-            <label for="amount">Amount</label> 
+            <label for="amount">Amount</label>
             <input type="text" name="amount" id="debit_card_amount" required/>
             <input type="submit" value="Add Money" class="button" id="add_using_debit_card"/>
           </div>
@@ -31,11 +40,11 @@ include("../../resources/header.php");
           <div class="input-field">
             <label for="credit_card_number">Card Number</label>
             <input type="text" name="card_number" id="credit_card_number" required />
-            <label for="expiry_date">Expiry Date</label> 
+            <label for="expiry_date">Expiry Date</label>
             <input type="txt" name="expiry_date" id="credit_card_expiry_date" placeholder="MM/YY" required/>
-            <label for="cvv">CVV</label> 
+            <label for="cvv">CVV</label>
             <input type="password" name="cvv" id="credit_card_cvv" required/>
-            <label for="amount">Amount</label> 
+            <label for="amount">Amount</label>
             <input type="text" name="amount" id="debit_card_amount" required/>
             <input type="submit" value="Add Money" class="button" id="add_using_credit_card"/>
           </div>

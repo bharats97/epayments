@@ -1,8 +1,15 @@
-
 <?php
+
+session_start();
+
+if (isset($_SESSION['status']) and $_SESSION['status'] === 'logged_in') {
+    include('../index.php');
+    exit();
+}
+
 include("../resources/header.php");
 ?>
-<link rel="stylesheet" type="text/css" href="../resources/css/signup.css"> 
+<link rel="stylesheet" type="text/css" href="../resources/css/signup.css">
 
 <script src="../resources/js/auth/validate_contact.js"></script>
 <script src="../resources/js/signup/signup_validations.js"></script>
@@ -19,7 +26,7 @@ include("../resources/header.php");
 				<p id="response_message"></p>
 
 			<form action="../app/signup/db_insert.php" method="post" id="signup_form">
-			
+
 				<div class="input-field">
 					<label for="firstname">First Name</label>
 					<input type="text" name="firstname" id="firstname" placeholder="First Name">

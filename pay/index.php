@@ -1,4 +1,12 @@
 <?php
+
+session_start();
+
+if (!isset($_SESSION['status'])) {
+    include('../index.php');
+    exit();
+}
+
 include("../resources/header.php");
 ?>
 
@@ -10,15 +18,15 @@ include("../resources/header.php");
           <h1>Pay</h1>
           <p id="error_message"></p>
           <p id="response_message"></p>
-  
+
           <div class="input-field">
             <label for="pay_to">Mobile Number*</label>
             <input type="text" name="pay_to" id="pay_to" onfocusout="validate_contact()" required/>
             <label for="contact_name">Name* </label>
             <input type="text" name="contact_name" id="contact_name" readonly required/>
-            <label for="amount">Amount*</label> 
+            <label for="amount">Amount*</label>
             <input type="text" name="amount" id="amount" onfocusout="validate_amount()" required/>
-            <label for="comment">Comment</label> 
+            <label for="comment">Comment</label>
             <input type="text" name="comment" id="comment"/>
             <input type="submit" value="Pay" class="button" id="pay"                   onclick="show_msg()"/>
           </div>

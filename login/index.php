@@ -1,4 +1,12 @@
 <?php
+
+session_start();
+
+if (isset($_SESSION['status']) and $_SESSION['status'] === 'logged_in') {
+    header('Location: http://localhost/epayments/accounts/user/');
+    exit();
+}
+
 include("../resources/header.php");
 ?>
 
@@ -9,9 +17,9 @@ include("../resources/header.php");
           <h1>Login</h1>
           <p id="error_message"></p>
           <p id="response_message"></p>
-  
+
     <form action="/epayments/app/auth/login.php" id="login_form">
-          
+
           <div class="input-field">
             <label for="contact">Mobile Number</label>
             <input type="text" name="contact" id="contact"required />
@@ -20,7 +28,7 @@ include("../resources/header.php");
             <input type="submit" value="Login" class="button" id="login"/>
           </div>
           Don't have an account?
-          <a href="/epayments/signup">Sign up</a>  
+          <a href="/epayments/signup">Sign up</a>
       </form>
 
 </div>
