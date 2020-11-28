@@ -14,9 +14,6 @@ include("../resources/header.php");
 	<div class="float-child">
 
 		<div class="forms">
-
-			<form action="../app/signup/db_insert.php" method="post">
-
 				<h1>Sign Up</h1>
 				<p id="error_message"></p>
 				<p id="response_message"></p>
@@ -35,23 +32,8 @@ include("../resources/header.php");
 					<label for="password">Password</label>
 					<input type="password" name="password" id="password" placeholder="Password">
 					<input type="submit" value="Sign Up" class="button" id="Sign_Up"/>
-
-				<div class="input-field">
-					<label for="firstname">First Name</label>
-					<input type="text" name="firstname" placeholder="First Name" onkeyup="validateFname()">
-					<label for="middlename">Middle Name</label>
-					<input type="text" name="middlename" placeholder="Middle Name">
-					<label for="lastname">Last Name</label>
-					<input type="text"  name="lastname" placeholder="Last Name">
-					<label for="contact">Mobile Number</label>
-					<input type="text"  name="contact" placeholder="Phone Number">
-					<label for="password">Password</label>
-					<input type="password" name="password" placeholder="Password">
-					<input type="submit" value="Sign Up" class="button" id="Sign Up"/>
-
 				</div>
 			</form>
-
 		</div>
 	</div>
 </div>

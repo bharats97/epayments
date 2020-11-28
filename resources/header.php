@@ -20,5 +20,4 @@
 			<li class="nav-item"><a href="#" class = "link">Logout</a></li>
 		</ul>
 	<? endif; ?>
-    </a>
 </nav>
