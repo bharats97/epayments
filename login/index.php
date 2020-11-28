@@ -14,6 +14,8 @@ include("../resources/header.php");
             <input type="password" name="password" id="password"required />
             <input type="submit" value="Login" class="button" id="login"/>
           </div>
+          Don't have an account?
+          <a href="/epayments/signup">Sign up</a>  
       </form>
 
 </div>
