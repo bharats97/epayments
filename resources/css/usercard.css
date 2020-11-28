@@ -34,6 +34,7 @@
 
   color: white;
 }
+<<<<<<< Updated upstream
 .usercard, .balance, .services{
 	text-align: center;
 	/*font-family: arial;*/
@@ -41,6 +42,21 @@
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
 	padding:10px;
+=======
+/* .usercard, .balance, .services{ 
+ text-align: center; 
+ align-items: center; 
+font-family: arial;
+ min-height: 100%; 
+ width: 100%; 
+ display: flexbox; 
+ box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); 
+
+ padding:10px; 
+ }*/ 
+#contact{
+  padding : 30px;
+>>>>>>> Stashed changes
 }
 
 
