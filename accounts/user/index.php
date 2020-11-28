@@ -68,10 +68,14 @@ include("../../resources/header.php");
 					</tr>
 				</thead>
 				<tbody></tbody>
+				<tfoot>
+					<tr>
+						<td>
+							<button id="show_more" class="button" onclick="more_transactions()">More Transactions</button>
+						</td>
+					</tr>
+				</tfoot>
 			</table>
-		</div>
-		<div id="btn_div" align="center">
-			<button id="show_more" class="button" onclick="more_transactions()">More Transactions</button>
 		</div>
 	</div>
 </div>
