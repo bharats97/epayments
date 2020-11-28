@@ -18,9 +18,7 @@
 		<ul class="login nav-menu">
 			<li class="nav-item"><a href="#" class = "link"><? echo $_SESSION['name']; ?></a></li>			
 			<li class="nav-item"><a href="#" class = "link">Logout</a></li>
-		</ul> 
-	<? else : ?>
-		<a href="#" class='login link'>Login</a>
+		</ul>
 	<? endif; ?>
     </a>
 </nav>

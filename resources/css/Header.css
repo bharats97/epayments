@@ -18,10 +18,6 @@
     text-decoration: none;
     color: black;
 }
-.login {
-    font-size: 1.5em;
-    margin: 10px 10px 10px 10px;
-}
 .nav-menu {
     display: inline;
 	list-style-type: none;
