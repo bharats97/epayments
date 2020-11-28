@@ -8,6 +8,9 @@ function getUserName($connection,$user_id)
 	if ($result->num_rows > 0) {
 		$row = $result->fetch_assoc();
 		$user_name=$row["first_name"]." ".$row["last_name"];
-	} 
+	} else {
+	    header('Location: http://localhost/epayments/error/');
+	    exit();
+	}
 	return $user_name;
 }

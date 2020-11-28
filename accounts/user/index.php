@@ -6,37 +6,53 @@
 <script type="text/javascript" src="../../resources/js/transactions/jquery-3.5.1.js"></script>
 
 <div>
-	<div>
-		<div align="center" style="width: 300px; background-color: blue">
-			<h2>Profile Card</h2>
-		</div>
-		<div class="usercard" style="background-color: blue">
-			<img src="john_doe.png" alt="John" style="width: 300px">
+	<div class="float-container">
+		<div class="float-child">
+			<center>
+				<div class="usercard" >
+					<h2>Profile Card</h2>
 
-			<h1 id="username"></h1>
-			<h2 id="contact">Contact: </h2>
+					<img src="john_doe.png" height="40%" width="60%" walt="John" >
+
+					<h3 id="username"></h3>
+					<h3 id="contact">Contact: </h3>
+				</div>
+			</center>
+		</div>
+		<div class="float-child ">
+			<div class="services">
+				<ul>
+					<li><a href="/epayments/pay">Pay</a></li>
+					<li><a href="/epayments/accounts/add_money_to_wallet">Add Money to Wallet</a></li>
+					<li><a href="/epayments/accounts/transfer_money_to_bank">Transfer Money to Bank</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="float-child">
+			<div class="balance" >
+				<center>
+					<br>
+					<h2>Wallet Balance</h2>
+					<img src="rupee.jpeg" height="10%" width="20%">
+					<h1 id="amount"></h1>
+				</center>
+			</div>
 		</div>
 	</div>
-	<div>
-		<div class="balance" style="background-color: yellow; float: right">
-			<h2>Your Wallet Balance Is</h2>
-			<h1 id="amount"></h1>
-		</div>
-	</div>
-	<div style="margin-bottom: 10px;">
+	<div >
 		<div>
 			<table id="txn_table" class="table">
-				<caption style="margin-bottom: 10px"><b><u>RECENT TRANSACTION TABLE</u></b></caption>
+				<caption ><h2><b>Recent Transactions</b></h2></caption>
 				<thead>
-				<tr id="table_header">
-					<th>Transactions ID</th>
-					<th>Sender Name</th>
-					<th>Receiver Name</th>
-					<th>Date</th>
-					<th>Time</th>
-					<th>Amount</th>
-					<th>Comment</th>
-				</tr>
+					<tr id="table_header">
+						<th>Transactions ID</th>
+						<th>Sender Name</th>
+						<th>Receiver Name</th>
+						<th>Date</th>
+						<th>Time</th>
+						<th>Amount</th>
+						<th>Comment</th>
+					</tr>
 				</thead>
 				<tbody></tbody>
 			</table>

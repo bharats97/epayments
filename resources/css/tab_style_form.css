@@ -18,7 +18,7 @@
 .forms h1 {
 	padding: 0 0 20px 0;
 	font-size: 26px;
-	color: #666;
+	color: #2A3132;
 	font-weight: lighter;
 	text-align: center;
 }
@@ -55,13 +55,13 @@
 	transition: all 0.4s ease-in-out;
 }
 .forms .tab-group li a:hover {
-	background: #dedfdf;
+	background: #;
 	color: #666;
 }
 .forms .tab-group .active a {
 	background: #fff;
 	color: #444;
-	border-top: 3px solid #73cf41;
+	border-top: 3px solid #336B87;
 }
 .forms input {
 	font-size: 16px;
@@ -97,7 +97,7 @@
 	font-weight: 300;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	background: #73cf41;
+	background: #336B87;
 	color: #ffffff;
 	cursor: pointer;
 	-moz-transition: all 0.4s ease-in-out;
@@ -105,7 +105,7 @@
 	-webkit-transition: all 0.4s ease-in-out;
 	transition: all 0.4s ease-in-out;
 }
-.forms .button:hover, .button:focus { background: #56ae26; }
+.forms .button:hover, .button:focus { background: #90AFC5; }
 .text-p { text-align: right; }
 .text-p a { color: #1383ea; }
 

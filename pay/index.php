@@ -1,11 +1,9 @@
 <?php
 include("../resources/header.php");
 ?>
-<link rel="stylesheet" type="text/css" href="../resources/css/tab_style_form.css">
+
 <link rel="stylesheet" type="text/css" href="../resources/css/toast.css">
 <script type="text/javascript" src="../resources/js/payment/pay.js"></script>
-<!--<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>-->
-<script type="text/javascript" src="../resources/js/payment/jquery-3.5.1.js"></script>
 
 <div class="forms">
     <form method="POST" id="pay_form">
