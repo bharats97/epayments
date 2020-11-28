@@ -2,7 +2,6 @@
 <?php
 include("../resources/header.php");
 ?>
-<link rel="stylesheet" type="text/css" href="../resources/css/tab_style_form.css"> 
 <link rel="stylesheet" type="text/css" href="../resources/css/signup.css"> 
 <script src="../resources/js/auth/validate_contact.js"></script>
 <script src="../resources/js/signup/signup_validations.js"></script>
