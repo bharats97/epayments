@@ -10,7 +10,7 @@
 </head>
 <body>
 <nav class='header'>
-	<a href="#" class='link'>
+	<a href="http://localhost/epayments/" class='link'>
 		<span class="brand-name">E-Pay</span>
 	</a>
 	<div class='space'></div>
