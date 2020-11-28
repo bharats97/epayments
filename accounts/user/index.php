@@ -1,10 +1,13 @@
 <script type="text/javascript" src="../../resources/js/transactions/transactions_history.js"></script>
+
 <script type="text/javascript" src="../../resources/js/user_details/about_user.js"></script>
 <link rel="stylesheet" type="text/css" href="../../resources/css/transactions_table.css">
 <link rel="stylesheet" type="text/css" href="../../resources/css/usercard.css">
+
 <?php
 include("../../resources/header.php");
 ?>
+
 <div>
 	<div class="float-container">
 		<div class="float-child">
