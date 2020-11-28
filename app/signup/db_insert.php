@@ -15,8 +15,9 @@ if (isset($_SESSION['user_id']) or !isset($_POST['contact'])) {
     $lastname = $connection->real_escape_string($_POST['lastname']);
     $password = $connection->real_escape_string($_POST['password']);
 
-    $statement = "INSERT INTO `login_credentials` (`contact`, `password`)"
-                 . " VALUES ('$contact', '$password');";
+    $statement = "INSERT INTO `user_details` (`contact`, `first_name`, "
+                 . "`middle_name`, `last_name`) VALUES ('$contact', "
+                 . "'$firstname', '$middlename', '$lastname');");
 
     if (($connection->query($statement)) === FALSE) {
         include('../connection/disconnect.php');
@@ -24,9 +25,8 @@ if (isset($_SESSION['user_id']) or !isset($_POST['contact'])) {
         exit();
     }
 
-    $statement = "INSERT INTO `user_details` (`contact`, `first_name`, "
-                 . "`middle_name`, `last_name`) VALUES ('$contact', "
-                 . "'$firstname', '$middlename', '$lastname');");
+    $statement = "INSERT INTO `login_credentials` (`contact`, `password`)"
+                 . " VALUES ('$contact', '$password');";
 
     if (($connection->query($statement)) === FALSE) {
         include('../connection/disconnect.php');
