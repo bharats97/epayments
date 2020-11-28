@@ -32,6 +32,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                  ' ' . $row['middle_name'] : '');
             $_SESSION['name'] .= (strlen((string) $row['last_name']) > 0 ?
                                  ' ' . $row['last_name'] : '');
+
+            include_once('../connection/disconnect.php');
+            header('Location: http://localhost/epayments/accounts/user/');
+            exit();
         }
     }
 
