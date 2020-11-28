@@ -2,7 +2,6 @@
 <?php
 include("../resources/header.php");
 ?>
-<link rel="stylesheet" type="text/css" href="../resources/css/tab_style_form.css"> 
 <link rel="stylesheet" type="text/css" href="../resources/css/signup.css"> 
 <div class="float-container">
 	<div class="float-child">
