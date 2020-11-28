@@ -18,7 +18,7 @@ include("../resources/header.php");
           <p id="error_message"></p>
           <p id="response_message"></p>
 
-    <form action="/epayments/app/auth/login.php" id="login_form">
+    <form action="/epayments/app/auth/login.php" id="login_form" method="post">
 
           <div class="input-field">
             <label for="contact">Mobile Number</label>
