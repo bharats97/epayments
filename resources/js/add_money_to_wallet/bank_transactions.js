@@ -22,11 +22,17 @@ function validate_data(card_details)
         return false;
     }
     if(cvv.length!=3)
+    {
         return false;
+    }
     if(amount<0)
+    {
         return false;
+    }
     if(year<current_year&&current_month>month||(month>12||month<=0))
+    {
         return false;
+    }
     return true;
 }
 $(document).ready(function(){
@@ -53,13 +59,13 @@ $(document).ready(function(){
     	}
     	else
     	{
-    		$("#error_message").fadeIn(500).html("Please fill in correct amount").fadeOut(5000);
+    		$("#error_message").fadeIn(500).html("Please fill in correct Details").fadeOut(5000);
     	}
     });
 
     $('#add_using_credit_card').on('click',function(e){
     	e.preventDefault();
-    	if(validate_data($("#debit_card")))
+    	if(validate_data($("#credit_card")))
     	{
     		$.post("/epayments/app/bank_transactions/add_money_to_wallet.php",
     			{
@@ -72,7 +78,7 @@ $(document).ready(function(){
     	}
     	else
     	{
-    		$("#error_message").fadeIn(500).html("Please fill in correct amount").fadeOut(5000);
+    		$("#error_message").fadeIn(500).html("Please fill in correct Details").fadeOut(5000);
     	}
     });
 
