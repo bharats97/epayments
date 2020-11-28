@@ -1,20 +1,64 @@
 <?php
-    require("dbconn.php");
-     $stmt = $conn->prepare("INSERT INTO user_details (contact, first_name, middle_name, last_name)
-     VALUES (:contact, :first_name, :middle_name, :last_name);
-     INSERT INTO login_credentials (contact, password) VALUES ( :contact, :password)");
-     $stmt->bindParam(':contact', $contact);
-     $stmt->bindParam(':first_name', $firstname);
-     $stmt->bindParam(':middle_name', $middlename);
-     $stmt->bindParam(':last_name', $lastname);
-     $stmt->bindParam(':password', $password);
 
-     if (isset($_POST['contact'])) {
-         $contact = $_POST['contact'];
-         $firstname = $_POST['firstname'];
-         $middlename = $_POST['middlename'];
-         $lastname = $_POST['lastname'];
-         $password = $_POST['password'];
-         $stmt->execute();
-         require("dbshow.php");
-     }
+include_once('../connection/connect.php');
+
+session_start();
+
+if (isset($_SESSION['user_id']) or !isset($_POST['contact'])) {
+    include('../connection/disconnect.php');
+    header('Location: http://localhost/epayments/error/');
+    exit();
+} else {
+    $contact = $connection->real_escape_string($_POST['contact']);
+    $firstname = $connection->real_escape_string($_POST['firstname']);
+    $middlename = $connection->real_escape_string($_POST['middlename']);
+    $lastname = $connection->real_escape_string($_POST['lastname']);
+    $password = $connection->real_escape_string($_POST['password']);
+
+    $statement = "INSERT INTO `login_credentials` (`contact`, `password`)"
+                 . " VALUES ('$contact', '$password');";
+
+    if (($connection->query($statement)) === FALSE) {
+        include('../connection/disconnect.php');
+        header('Location: http://localhost/epayments/error/');
+        exit();
+    }
+
+    $statement = "INSERT INTO `user_details` (`contact`, `first_name`, "
+                 . "`middle_name`, `last_name`) VALUES ('$contact', "
+                 . "'$firstname', '$middlename', '$lastname');");
+
+    if (($connection->query($statement)) === FALSE) {
+        include('../connection/disconnect.php');
+        header('Location: http://localhost/epayments/error/');
+        exit();
+    }
+
+    $result = $connection->query("SELECT `user_id` from `user_details` "
+                                 . "WHERE `contact` = '$contact';");
+
+    if ($result === FALSE or $result->num_rows === 0) {
+        include('../connection/disconnect.php');
+        header('Location: http://localhost/epayments/error/');
+        exit();
+    }
+
+    $user_id = ($result->fetch_assoc())['user_id'];
+    $statement = "INSERT INTO `user_wallet` (`user_id`) VALUES ('$user_id');";
+
+    if (($connection->query($statement)) === FALSE) {
+        include('../connection/disconnect.php');
+        header('Location: http://localhost/epayments/error/');
+        exit();
+    }
+
+    $_SESSION['status'] = 'logged_in';
+    $_SESSION['user_id'] = $user_id;
+    $_SESSION['name'] = trim($firstname . ' ' . $middlename . ' ' . $lastname);
+
+    include('../connection/disconnect.php');
+    header('Location: http://localhost/epayments/accounts/user/');
+    exit();
+}
+
+include_once('../connection/disconnect.php');
