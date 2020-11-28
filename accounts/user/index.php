@@ -70,7 +70,7 @@ include("../../resources/header.php");
 				<tbody></tbody>
 				<tfoot>
 					<tr>
-						<td>
+						<td colspan="7" style="text-align:center">
 							<button id="show_more" class="button" onclick="more_transactions()">More Transactions</button>
 						</td>
 					</tr>

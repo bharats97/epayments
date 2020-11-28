@@ -6,9 +6,9 @@
   align-items: center;
   justify-content: space-evenly;
   display: flex;
-  flex:1;
+  /* flex:1; */
   /* border: 1px solid green; */
-  height: 80%;
+  min-height: 80%;
 }
 
 .float-child {
@@ -17,10 +17,10 @@
   /* border: 1px solid red; */
   /* float: left; */
   /* display: inline-block; */
-  display: flex;
+  /* display: flex; */
   /* justify-content: space-evenly; */
   align-items: center;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
   padding: 20px;
 
 }  
@@ -45,17 +45,8 @@ border-bottom:1px solid #90AFC5;
 /* Change the link color on hover */
 .services li a:hover {
 background-color: #336B87;
-
 color: white;
 }
-
-.usercard, .balance, .services{
-	text-align: center;
-	/*font-family: arial;*/
-	height:60%;
-	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-
-	padding:10px;
 
 /* .usercard, .balance, .services{ 
  text-align: center; 
