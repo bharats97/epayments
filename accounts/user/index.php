@@ -1,6 +1,5 @@
 <script type="text/javascript" src="../../resources/js/transactions/transactions_history.js"></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
 <script type="text/javascript" src="../../resources/js/user_details/about_user.js"></script>
 <link rel="stylesheet" type="text/css" href="../../resources/css/transactions_table.css">
 <link rel="stylesheet" type="text/css" href="../../resources/css/usercard.css">
@@ -11,7 +10,7 @@
 			<h2>Profile Card</h2>
 		</div>
 		<div class="usercard" style="background-color: blue">
-			<img src="john_doe.png" alt="John" style="width: 100%">
+			<img src="john_doe.png" alt="John" style="width: 300px">
 
 			<h1 id="username"></h1>
 			<h2 id="contact">Contact: </h2>
@@ -23,7 +22,7 @@
 			<h1 id="amount"></h1>
 		</div>
 	</div>
-	<div style="margin-bottom: 10px">
+	<div style="margin-bottom: 10px;">
 		<div>
 			<table id="txn_table" class="table">
 				<caption style="margin-bottom: 10px"><b><u>RECENT TRANSACTION TABLE</u></b></caption>
