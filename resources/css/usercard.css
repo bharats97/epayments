@@ -1,20 +1,44 @@
-.usercard, .balance{
-	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-	width: 300px;
-	height: 300px;
-	margin: auto;
-	text-align: center;
-	font-family: arial;
-	float: left;
+*{
+    color:#2A3132;
+}
+.float-container {
+    padding: 10px;
 }
 
-.contact{
-	background-color: #000;
-	color:white;
-	display: inline-block;
-	padding: 8px;
+.float-child {
+    width: 30%;
+    float: left;
+    padding: 20px;
+
+}  
+
+.services ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+ }
+
+.services li a {
+  display: block;
+  color: #000;
+  font-size: 25px;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  border-bottom:1px solid #90AFC5;
+}
+
+/* Change the link color on hover */
+.services li a:hover {
+  background-color: #336B87;
+
+  color: white;
+}
+.usercard, .balance, .services{
 	text-align: center;
-	cursor: pointer;
-	width: 100px;
-	font-size: 18px;
+	/*font-family: arial;*/
+	height:60%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+	padding:10px;
 }

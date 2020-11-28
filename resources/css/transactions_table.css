@@ -6,24 +6,27 @@ table{
 }
 
 th{
-	background-color: #4CAF50;
-	border: 1px solid black;
+	color:white;
+	background-color: #336B87;
+	border: none;
 	text-align: left;
 	padding: 8px;
 }
 
 td{
-	border: 1px solid black;
 	text-align: left;
 	padding: 8px;
 }
 
 tr:nth-child(even){
-	background-color: #dddddd;
+	background-color: #90AFC5;
 }
-
+#table_separator{
+	width:70%;
+	border:1px solid #90AFC5;
+}
 .button{
-	background-color: #4CAF50;
+	background-color: #336B87;
 	border: none;
 	color: white;
 	padding: 15px 32px;
@@ -36,5 +39,5 @@ tr:nth-child(even){
 }
 
 .button:hover {
-	background-color: green;
+	background-color: #2e5f78;
 }
