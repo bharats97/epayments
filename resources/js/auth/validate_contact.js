@@ -3,6 +3,5 @@ function validate_contact(contact) {
     if (contact.length >= 8 && contact.length <= 12 && contact.match(numbers)) {
         return true
     }
-    alert('Invalid Contact Number')
     return false
 }
