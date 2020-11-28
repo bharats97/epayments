@@ -1,4 +1,12 @@
 <?php
+
+session_start();
+
+if (!isset($_SESSION['status'])) {
+    include('../../index.php');
+    exit();
+}
+
 include("../../resources/header.php");
 ?>
 <script src="../../resources/js/transfer_money_to_bank/transfer_money_to_bank.js"></script>
@@ -14,7 +22,7 @@ include("../../resources/header.php");
             <input type="text" name="bank_name" id="bank_name"required />
             <label for="IFSC_code">IFSC Code</label>
             <input type="text" name="IFSC_code" id="IFSC_code"required />
-            <label for="amount">Amount</label> 
+            <label for="amount">Amount</label>
             <input type="text" name="amount" id="amount" required/>
             <label for="comment">Comment</label>
             <input type="text" name="comment" id="comment"/>

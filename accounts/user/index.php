@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION['status'])) {
+    include('../../index.php');
+    exit();
+}
+
+?>
+
 <script type="text/javascript" src="../../resources/js/transactions/transactions_history.js"></script>
 
 <script type="text/javascript" src="../../resources/js/user_details/about_user.js"></script>
