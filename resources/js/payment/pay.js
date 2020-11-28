@@ -33,3 +33,20 @@ function validate_amount(){
 	}
 }
 
+function show_msg(){
+	event.preventDefault();
+	$("#paid_to").html($("#contact_name").val());
+	$("#paid_amount").html("Rs. "+$("#amount").val()+"/-");
+	var x1 = document.getElementById("paid_toast");
+	x1.className = 'show';
+	setTimeout(function(){
+		x1.className = x1.className.replace("show","");
+	}, 3000);
+
+	window.setTimeout(function(){
+		document.getElementById("pay_form").action = "../app/payment/complete_payment.php";
+		document.getElementById("pay_form").submit();
+	},4000);
+}
+
+

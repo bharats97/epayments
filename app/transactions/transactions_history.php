@@ -13,10 +13,10 @@
 	if($result->num_rows > 0){
 		while($row = $result->fetch_assoc()){
 			$dt = explode(" ", $row["timestamp"]);
-			echo $row["transaction_id"]. ",". $row["sender_name"] .",". $row["receiver_name"] .",". $dt[0]. "," .$dt[1] .",". $row["amount"] .",". $row["comment"]. "\n";
+			echo $row["transaction_id"]. ",". $row["sender_name"] .",". $row["receiver_name"] .",". $dt[0]. "," .$dt[1] .",". $row["amount"] .",".   $row["comment"]. "\n";
 		}
 	}
-
 	include("../connection/disconnect.php");
-
 ?>
+
+

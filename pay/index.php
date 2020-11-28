@@ -1,12 +1,14 @@
 <?php
 include("../resources/header.php");
 ?>
-<link rel="stylesheet" type="text/css" href="../resources/css/tab_style_form.css"> 
+<link rel="stylesheet" type="text/css" href="../resources/css/tab_style_form.css">
+<link rel="stylesheet" type="text/css" href="../resources/css/toast.css">
 <script type="text/javascript" src="../resources/js/payment/pay.js"></script>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<!--<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>-->
+<script type="text/javascript" src="../resources/js/payment/jquery-3.5.1.js"></script>
 
 <div class="forms">
-    <form method="POST" action="../app/payment/complete_payment.php" id="pay_form">
+    <form method="POST" id="pay_form">
           <h1>Pay</h1>
           <p id="error_message"></p>
           <p id="response_message"></p>
@@ -20,10 +22,17 @@ include("../resources/header.php");
             <input type="text" name="amount" id="amount" onfocusout="validate_amount()" required/>
             <label for="comment">Comment</label> 
             <input type="text" name="comment" id="comment"/>
-            <input type="submit" value="Pay" class="button" id="pay"/>
+            <input type="submit" value="Pay" class="button" id="pay"                   onclick="show_msg()"/>
           </div>
       </form>
-
+      <div id="toast" class="toast">
+        <h2><b>Please wait while your transaction is being processed!!!</b></h2>
+      </div>
+      <div id="paid_toast" class="toast">
+        <h3>Paid Successfully to</h3>
+        <h2 id="paid_to"></h2>
+        <h1 id="paid_amount"></h1>
+      </div>
 </div>
 <?php
 include("../resources/footer.php");

@@ -11,4 +11,5 @@ function fetch_user_details(){
 	xmlhttp.open("GET", "../../app/user_details/about_user.php", true);
 	xmlhttp.send();
 }
+
 fetch_user_details();
