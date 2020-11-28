@@ -7,10 +7,12 @@ function validateAmount($connection,$user_id,$amount)
 	if ($result->num_rows > 0) {
 		$row = $result->fetch_assoc();
 		$user_balance=$row["wallet_balance"];
-	} 
+	} else {
+	    header('Location: http://localhost/epayments/error/');
+	    exit();
+	}
 	if($user_balance<$amount)
 		return FALSE;
 	else
 		return TRUE;
-	
 }

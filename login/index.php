@@ -1,8 +1,10 @@
 <?php
 include("../resources/header.php");
 ?>
+
 <script src="../resources/js/auth/validate_contact.js"></script>
 <script src="../resources/js/auth/login.js"></script>
+
 <div class="forms">
           <h1>Login</h1>
           <p id="error_message"></p>

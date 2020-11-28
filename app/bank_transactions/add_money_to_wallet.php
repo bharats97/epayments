@@ -5,7 +5,7 @@ include_once("update_wallet_balance.php");
 include_once("add_transaction.php");
 include_once("get_username.php");
 $admin_id=0;
-//dummy session variable user_id 
+//dummy session variable user_id
 
 if(isset($_SESSION["user_id"])&&isset($_POST["amount"])&&isset($_POST["card_type"]))
 {
@@ -28,7 +28,7 @@ if(isset($_SESSION["user_id"])&&isset($_POST["amount"])&&isset($_POST["card_type
 	$response_string=addMoneyToWallet($user_id,$amount,$connection);
 	if($amount_deducted>0)
 		$response_string.="Rupees $amount_deducted/- service charge deducted ";
-	
+
 	$comment="Rupees ".$amount."/- added to your wallet";
 	$user_name=getUserName($connection,$user_id);
 	addTransaction($connection,"NULL",$user_id,"Bank",$user_name,$amount,$comment);
@@ -36,8 +36,8 @@ if(isset($_SESSION["user_id"])&&isset($_POST["amount"])&&isset($_POST["card_type
 }
 else
 {
-	echo "Internal Error";
+    include_once('../connection/disconnect.php');
+	header('Location: http://localhost/epayments/app/auth/logout.php');
+	exit();
 }
 include_once("../connection/disconnect.php");
-
-?>
