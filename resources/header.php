@@ -5,6 +5,7 @@
 	<script src="../../resources/js/switch_form_tab.js"></script>
 	<link rel="stylesheet" type="text/css" href="../../resources/css/tab_style_form.css"> 
 	<link rel="stylesheet" href="../resources/css/Header.css">
+	<link rel="stylesheet" href="../resources/css/Footer.css">
 	<title>E-payments</title>
 </head>
 <body>
