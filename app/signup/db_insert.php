@@ -6,7 +6,7 @@ session_start();
 
 if (isset($_SESSION['user_id']) or !isset($_POST['contact'])) {
     include('../connection/disconnect.php');
-    header('Location: http://localhost/epayments/error/');
+    header('Location: http://localhost/epayments/accounts/user/');
     exit();
 } else {
     $contact = $connection->real_escape_string($_POST['contact']);

@@ -5,7 +5,7 @@
 
 	if (!isset($_SESSION['user_id'])) {
 	    include('../connection/disconnect.php');
-	    header('Location: http://localhost/epayments/error/');
+	    header('Location: http://localhost/epayments/app/auth/logout.php');
 	    exit();
 	}
 	
@@ -13,6 +13,13 @@
 	
 	$sql = "SELECT * FROM user_details WHERE user_id=$current_user";
 	$result = $connection->query($sql);
+
+	if ($result === FALSE) {
+	    include('../connection/disconnect.php');
+	    header('Location: http://localhost/epayments/error/');
+	    exit();
+	}
+	
 	$firstname="";
 	$middlename="";
 	$lastname="";
@@ -35,6 +42,13 @@
 	}
 	$sql = "SELECT wallet_balance FROM user_wallet WHERE user_id=$current_user";
 	$result = $connection->query($sql);
+
+	if ($result === FALSE) {
+	    include('../connection/disconnect.php');
+	    header('Location: http://localhost/epayments/error/');
+	    exit();
+	}
+	
 	if($result->num_rows > 0){
 		$row = $result->fetch_assoc();
 		$balance = $row['wallet_balance'];
@@ -45,4 +59,3 @@
 	}
 	echo $fullname.",".$contact.",".$balance;
 	include("../connection/disconnect.php");
-?>

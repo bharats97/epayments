@@ -39,7 +39,7 @@ if(isset($_SESSION["user_id"])&&isset($_POST["receiver_name"])&&isset($_POST["ba
 else
 {
 	include_once('../connection/disconnect.php');
-	header('Location: http://localhost/epayments/error/');
+	header('Location: http://localhost/epayments/app/auth/logout.php');
 	exit();
 }
 

@@ -37,7 +37,7 @@ if(isset($_SESSION["user_id"])&&isset($_POST["amount"])&&isset($_POST["card_type
 else
 {
     include_once('../connection/disconnect.php');
-	header('Location: http://localhost/epayments/error/');
+	header('Location: http://localhost/epayments/app/auth/logout.php');
 	exit();
 }
 include_once("../connection/disconnect.php");
