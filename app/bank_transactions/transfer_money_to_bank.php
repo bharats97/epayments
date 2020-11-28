@@ -28,7 +28,7 @@ if(isset($_SESSION["user_id"])&&isset($_POST["receiver_name"])&&isset($_POST["ba
 		$user_name=getUserName($connection,$user_id);
 		addTransaction($connection,$user_id,"NULL",$user_name,$bank_name,$amount,$comment);
 		addTransaction($connection,$user_id,$admin_id,$user_name,"Admin",$amount,$comment);
-		
+
 		echo $response_string;
 	}
 	else
@@ -38,8 +38,9 @@ if(isset($_SESSION["user_id"])&&isset($_POST["receiver_name"])&&isset($_POST["ba
 }
 else
 {
-	echo"error";
-	// Error
+	include_once('../connection/disconnect.php');
+	header('Location: http://localhost/epayments/error/');
+	exit();
 }
 
 include_once("../connection/disconnect.php");
