@@ -1,5 +1,12 @@
 <?php
 
+session_start();
+
+if (isset($_SESSION['status']) and $_SESSION['status'] === 'logged_in') {
+    header('Location: http://localhost/epayments/accounts/user/');
+    exit();
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     include_once('../connection/connect.php');
 
@@ -15,7 +22,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: http://localhost/epayments/error/');
         exit();
     } else {
-        session_start();
         $_SESSION['status'] = 'logged_in';
         $statement = "SELECT `user_id` FROM `user_details` WHERE `contact` = '"
                      . $contact . "';";
