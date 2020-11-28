@@ -30,7 +30,7 @@ $(document).ready(function(){
     });
     $("#middlename").on('blur',function(){
         var contact=$("#middlename").val();
-        if(!validateName(contact))
+        if(contact!=""&&!validateName(contact))
         {
             valid_mname=true;
             $("#error_message").fadeIn(500).html("Invalid middlename").fadeOut(5000);
@@ -43,7 +43,7 @@ $(document).ready(function(){
 
     $("#lastname").on('blur',function(){
         var contact=$("#lastname").val();
-        if(!validateName(contact))
+        if(contact!=""&&!validateName(contact))
         {
             valid_lname=true;
             $("#error_message").fadeIn(500).html("Invalid lastname").fadeOut(5000);

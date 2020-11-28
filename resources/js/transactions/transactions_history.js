@@ -1,26 +1,26 @@
-function fetch_show_transaction(num=5){
-	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.onreadystatechange = function() {
-		if(this.readyState == 4 && this.status == 200){
-			var rows = (this.responseText).split("\n");
-			var table_content = "";
-			for(var i=0; i<rows.length-1; i++){
-				var row = (rows[i]).split(",");
-				table_content+="<tr>";
-				table_content+="<td>"+row[0]+"</td>";
-				table_content+="<td>"+row[1]+"</td>";
-				table_content+="<td>"+row[2]+"</td>";
-				table_content+="<td>"+row[3]+"</td>";
-				table_content+="<td>"+row[4]+"</td>";
-				table_content+="<td>"+row[5]+"</td>";
-				table_content+="<td>"+row[6]+"</td>";
-				table_content+="</tr>";
-			}
-			$('table tbody').html(table_content);
+function fetch_show_transaction(nums=5){
+	$.get("../../app/transactions/transactions_history.php",
+	{
+		num:nums
+	},
+	function(data, status){
+		var rows = (data).split("\n");
+		var table_content = "";
+		for(var i=0; i<rows.length-1; i++){
+			var row = (rows[i]).split(",");
+			table_content+="<tr>";
+			table_content+="<td>"+row[0]+"</td>";
+			table_content+="<td>"+row[1]+"</td>";
+			table_content+="<td>"+row[2]+"</td>";
+			table_content+="<td>"+row[3]+"</td>";
+			table_content+="<td>"+row[4]+"</td>";
+			table_content+="<td>"+row[5]+"</td>";
+			table_content+="<td>"+row[6]+"</td>";
+			table_content+="</tr>";
 		}
-	};
-	xmlhttp.open("GET", "../../app/transactions/transactions_history.php?num="+num, true);
-	xmlhttp.send();
+		$('table tbody').html(table_content);
+	});
+
 }
 
 fetch_show_transaction();

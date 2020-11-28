@@ -2,10 +2,12 @@
 	margin:0;
 }
 .header {
-    background-color: rgb(0, 174, 255);
+    background-color:#2f3b3d;
     align-items: center;
     position: sticky;
     top: 0;
+    padding:10px;
+    color:white;
     z-index: 100;
     display: flex;
     
@@ -16,7 +18,7 @@
 }
 .link {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 .nav-menu {
     display: inline;
@@ -31,4 +33,5 @@
     font-size: 2em;
     font-weight: 1000;
     margin:10px 10px 10px 10px;
+    color:white;
 }
