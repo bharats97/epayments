@@ -2,10 +2,10 @@
 <html>
 <head>
 	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-	<script src="../../resources/js/switch_form_tab.js"></script>
-	<link rel="stylesheet" type="text/css" href="../resources/css/tab_style_form.css"> 
-	<link rel="stylesheet" href="../resources/css/Header.css">
-	<link rel="stylesheet" href="../resources/css/Footer.css">
+	<script src="/epayments/resources/js/switch_form_tab.js"></script>
+	<link rel="stylesheet" type="text/css" href="/epayments/resources/css/tab_style_form.css"> 
+	<link rel="stylesheet" href="/epayments/resources/css/Header.css">
+	<link rel="stylesheet" href="/epayments/resources/css/Footer.css">
 	<title>E-payments</title>
 </head>
 <body>
