@@ -14,9 +14,9 @@ function validate_data(card_details)
     var amount=card_details.find("input[name=amount]").val();
     var month=expiry_date[0];
     var year=expiry_date[1];
-    var d=new Date();
-    var current_month=d.getMonth();
-    var current_year=d.getFullYear();
+    // var d=new Date();
+    // var current_month=d.getMonth();
+    // var current_year=d.getFullYear();
     if(isNaN(card_no)||isNaN(cvv)||isNaN(amount)||isNaN(month)||isNaN(year))
     {
         return false;
@@ -26,10 +26,6 @@ function validate_data(card_details)
         return false;
     }
     if(amount<0)
-    {
-        return false;
-    }
-    if(year<current_year&&current_month>month||(month>12||month<=0))
     {
         return false;
     }

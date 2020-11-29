@@ -19,7 +19,7 @@ if(isset($_SESSION["user_id"])&&isset($_POST["receiver_name"])&&isset($_POST["ba
 	//validate amount
 	if(validateAmount($connection,$user_id,$amount))
 	{
-		$amount_deducted=$amount*0.2;
+		$amount_deducted=$amount*0.02;
 		$amount=$amount-$amount_deducted;
 		$response_string=deductMoneyFromWallet($user_id,$amount,$connection);
 		addMoneyToWallet($admin_id,$amount_deducted,$connection);
