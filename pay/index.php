@@ -28,16 +28,11 @@ include("../resources/header.php");
             <input type="text" name="amount" id="amount" onfocusout="validate_amount()" required/>
             <label for="comment">Comment</label>
             <input type="text" name="comment" id="comment"/>
-            <input type="submit" value="Pay" class="button" id="pay"                   onclick="show_msg()"/>
+            <input type="submit" value="Pay" class="button" id="pay" onclick="show_msg()"/>
           </div>
       </form>
       <div id="toast" class="toast">
         <h2><b>Please wait while your transaction is being processed!!!</b></h2>
-      </div>
-      <div id="paid_toast" class="toast">
-        <h3>Paid Successfully to</h3>
-        <h2 id="paid_to"></h2>
-        <h1 id="paid_amount"></h1>
       </div>
 </div>
 <?php

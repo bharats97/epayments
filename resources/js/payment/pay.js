@@ -37,7 +37,7 @@ function show_msg(){
 	event.preventDefault();
 	$("#paid_to").html($("#contact_name").val());
 	$("#paid_amount").html("Rs. "+$("#amount").val()+"/-");
-	var x1 = document.getElementById("paid_toast");
+	var x1 = document.getElementById("toast");
 	x1.className = 'show';
 	setTimeout(function(){
 		x1.className = x1.className.replace("show","");
@@ -48,5 +48,3 @@ function show_msg(){
 		document.getElementById("pay_form").submit();
 	},4000);
 }
-
-
