@@ -14,10 +14,10 @@
 		<span class="brand-name">E-Pay</span>
 	</a>
 	<div class='space'></div>
-    <? if (isset($_SESSION['name'])): ?>
+    <?php if (isset($_SESSION['name'])) { ?>
 		<ul class="login nav-menu">
-			<li class="nav-item"><a href="http://localhost/epayments/accounts/user/" class = "link"><? echo $_SESSION['name']; ?></a></li>
+			<li class="nav-item"><a href="http://localhost/epayments/accounts/user/" class = "link"><?php echo $_SESSION['name']; ?></a></li>
 			<li class="nav-item"><a href="http://localhost/epayments/logout/" class = "link">Logout</a></li>
 		</ul>
-	<? endif; ?>
+	<?php } ?>
 </nav>
