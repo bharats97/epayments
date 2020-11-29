@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     } else {
         $_SESSION['status'] = 'logged_in';
-        $statement = "SELECT `user_id` FROM `user_details` WHERE `contact` = '"
+        $statement = "SELECT * FROM `user_details` WHERE `contact` = '"
                      . $contact . "';";
         $result = $connection->query($statement);
         if ($result === FALSE or $result->num_rows === 0) {
