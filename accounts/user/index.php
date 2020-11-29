@@ -25,7 +25,7 @@ include("../../resources/header.php");
 				<div class="usercard" >
 					<h2>Profile Card</h2>
 
-					<img src="john_doe.png" height="40%" width="60%" walt="John" >
+					<img src="/epayments/resources/images/john_doe.png" height="40%" width="60%" walt="John" >
 
 					<h3 id="username"></h3>
 					<h3 id="contact">Contact: </h3>
@@ -46,7 +46,7 @@ include("../../resources/header.php");
 				<center>
 					<br>
 					<h2>Wallet Balance</h2>
-					<img src="rupee.jpeg" height="10%" width="20%">
+					<img src="/epayments/resources/images/rupee.png" height="10%" width="20%">
 					<h1 id="amount"></h1>
 				</center>
 			</div>
@@ -70,7 +70,7 @@ include("../../resources/header.php");
 				<tbody></tbody>
 				<tfoot>
 					<tr>
-						<td>
+						<td colspan="7" style="text-align:center">
 							<button id="show_more" class="button" onclick="more_transactions()">More Transactions</button>
 						</td>
 					</tr>
