@@ -13,13 +13,14 @@ if(isset($_SESSION["user_id"])&&isset($_POST["amount"])&&isset($_POST["card_type
 	$amount=$_POST["amount"];
 	$card_type=$_POST["card_type"];
 	$amount_deducted=0;
-	$user_name="";
+	$user_name=getUserName($connection,$user_id);
+	
 	if($card_type=="credit_card")
 	{
 		$amount_deducted=$amount*0.02;
 		//add service charges to admin's wallet
 		addMoneyToWallet($admin_id,$amount_deducted,$connection);
-		addTransaction($connection,$user_id,$admin_id,$user_name,"Admin",$amount,"Service Charge");
+		addTransaction($connection,$user_id,$admin_id,$user_name,"Admin",$amount_deducted,"Service Charge");
 		$amount=$amount-$amount_deducted;
 	}
 
@@ -30,7 +31,6 @@ if(isset($_SESSION["user_id"])&&isset($_POST["amount"])&&isset($_POST["card_type
 		$response_string.="Rupees $amount_deducted/- service charge deducted ";
 
 	$comment="Rupees ".$amount."/- added to your wallet";
-	$user_name=getUserName($connection,$user_id);
 	addTransaction($connection,"NULL",$user_id,"Bank",$user_name,$amount,$comment);
 	echo $response_string;
 }
