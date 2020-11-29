@@ -15,6 +15,10 @@ if (isset($_SESSION['user_id']) or !isset($_POST['contact'])) {
     $lastname = $connection->real_escape_string($_POST['lastname']);
     $password = $connection->real_escape_string($_POST['password']);
 
+    $firstname = ucwords(strtolower($firstname));
+    $middlename = ucwords(strtolower($middlename));
+    $lastname = ucwords(strtolower($lastname));
+
     $statement = "INSERT INTO `user_details` (`contact`, `first_name`, "
                  . "`middle_name`, `last_name`) VALUES ('$contact', "
                  . "'$firstname', '$middlename', '$lastname');";
