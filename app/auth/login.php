@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $connection->real_escape_string($_POST['password']);
 
     $statement = "SELECT * FROM `login_credentials` WHERE `contact` = '"
-                 . $contact . "';";
+                 . $contact . "' AND `password` = '$password';";
     $result = $connection->query($statement);
 
     if ($result === FALSE or $result->num_rows === 0) {
