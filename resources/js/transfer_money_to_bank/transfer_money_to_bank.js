@@ -6,7 +6,7 @@ $(document).ready(function(){
 		var transfer_amount=$("#amount").val();
 		if(isNaN(IFSC_code)||isNaN(transfer_amount)||transfer_amount<=0)
 		{
-			$("#error_message").fadeIn(500).html("Please fill in correct amount").fadeOut(5000);
+			$("#error_message").fadeIn(500).html("Please fill in correct details").fadeOut(5000);
 		}
 		else
 		{
