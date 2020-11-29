@@ -22,16 +22,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         header('Location: http://localhost/epayments/error/');
         exit();
     } else {
-        $_SESSION['status'] = 'logged_in';
         $statement = "SELECT * FROM `user_details` WHERE `contact` = '"
                      . $contact . "';";
         $result = $connection->query($statement);
+
         if ($result === FALSE or $result->num_rows === 0) {
             include('../connection/disconnect.php');
             header('Location: http://localhost/epayments/error/');
             exit();
         } else {
             $row = $result->fetch_assoc();
+            $_SESSION['status'] = 'logged_in';
             $_SESSION['user_id'] = $row['user_id'];
             $_SESSION['name'] = $row['first_name'];
             $_SESSION['name'] .= (strlen((string) $row['middle_name']) > 0 ?
