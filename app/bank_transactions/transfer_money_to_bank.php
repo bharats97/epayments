@@ -7,7 +7,6 @@ include_once("get_username.php");
 include_once("validate_amount_from_wallet.php");
 
 $admin_id=0;
-$_SESSION["user_id"]=2;
 if(isset($_SESSION["user_id"])&&isset($_POST["receiver_name"])&&isset($_POST["bank_name"])&&isset($_POST["IFSC_code"])&&isset($_POST["amount"]))
 {
 	$user_id=$_SESSION["user_id"];
