@@ -16,7 +16,7 @@ include("../../resources/header.php");
     <p id="response_message"></p>
     <form action="#" id="bank_transfer">
           <div class="input-field">
-            <label for="receiver_name">Receiver Name</label>
+            <label for="receiver_name">Account Number</label>
             <input type="text" name="receiver_name" id="receiver_name"required />
             <label for="bank_name">Bank Name</label>
             <input type="text" name="bank_name" id="bank_name"required />

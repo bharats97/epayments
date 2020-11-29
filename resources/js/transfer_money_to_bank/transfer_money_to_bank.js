@@ -4,7 +4,8 @@ $(document).ready(function(){
 
 		var IFSC_code=$("#IFSC_code").val();
 		var transfer_amount=$("#amount").val();
-		if(isNaN(IFSC_code)||isNaN(transfer_amount)||transfer_amount<=0)
+		var account_number=$("#receiver_name").val();
+		if(isNaN(IFSC_code)||isNaN(transfer_amount)||transfer_amount<=0||isNaN(account_number))
 		{
 			$("#error_message").fadeIn(500).html("Please fill in correct details").fadeOut(5000);
 		}
