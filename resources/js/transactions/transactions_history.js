@@ -14,7 +14,8 @@ function fetch_show_transaction(nums=5){
 			table_content+="<td>"+row[2]+"</td>";
 			table_content+="<td>"+row[3]+"</td>";
 			table_content+="<td>"+row[4]+"</td>";
-			table_content+="<td>"+row[5]+"</td>";
+			var amount = parseFloat(row[5]).toFixed(2);
+			table_content+="<td>"+amount+"</td>";
 			table_content+="<td>"+row[6]+"</td>";
 			table_content+="</tr>";
 		}

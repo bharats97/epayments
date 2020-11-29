@@ -55,6 +55,10 @@ $(document).ready(function(){
     			},
     			function(data, status){
   					$("#response_message").fadeIn(500).html( data ).fadeOut(5000);
+                    setTimeout(function(){
+                        window.location.href = "http://localhost/epayments/";
+                    },3000);
+                    
   				});
     	}
     	else
@@ -74,6 +78,10 @@ $(document).ready(function(){
     			},
     			function(data, status){
   					$("#response_message").fadeIn(500).html( data ).fadeOut(5000);
+                    setTimeout(function(){
+                        window.location.href = "http://localhost/epayments/";
+                    },3000);
+                    
   				});
     	}
     	else

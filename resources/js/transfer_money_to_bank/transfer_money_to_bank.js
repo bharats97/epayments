@@ -20,6 +20,10 @@ $(document).ready(function(){
     			},
     			function(data, status){
   					$("#response_message").fadeIn(500).html( data ).fadeOut(5000);
+  					setTimeout(function(){
+                        window.location.href = "http://localhost/epayments/";
+                    },2000);
+                    
   				});
 		}
 
