@@ -71,7 +71,7 @@ include("../../resources/header.php");
 				<tfoot>
 					<tr>
 						<td colspan="7" style="text-align:center">
-							<button id="show_more" class="button" onclick="more_transactions()">More Transactions</button>
+							<div id="btn_div"> <button id="show_more" class="button" onclick="more_transactions()">More Transactions</button> </div>
 						</td>
 					</tr>
 				</tfoot>
@@ -82,4 +82,3 @@ include("../../resources/header.php");
 <?php
 include("../../resources/footer.php");
 ?>
-
