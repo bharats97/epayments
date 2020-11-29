@@ -8,11 +8,6 @@ This is project is built with HTML, CSS, PHP, Javascript and MySQL.
 ### Installing Prerequisites
 
 You need to install xampp/wamp/lamp.
-
-##### Using `apt` package manager (Debian/Ubuntu)
-Before you begin installing make sure you run `sudo apt update` to get the latest version available.
-
-
 ### Clone Project
 You can simply go to document root `/opt/lampp/htdocs` and clone the project using `git` as:
 
