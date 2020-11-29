@@ -1,4 +1,12 @@
 <?php
+
+    session_start();
+
+    if (!isset($_SESSION['status'])) {
+        include('../../index.php');
+        exit();
+    }
+
 	include("../connection/connect.php");
 	$contact = $_GET['contact'];
 	$sql = "SELECT * FROM user_details WHERE contact=$contact";
