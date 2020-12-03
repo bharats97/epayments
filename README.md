@@ -2,30 +2,37 @@
 
 This project is a simulation of an E-Wallet.
 
-## Local Development
-This is project is built with HTML, CSS, PHP, Javascript and MySQL.
+### Local Development
+
+This project is built with HTML, CSS, PHP, JavaScript and MySQL.
 
 ### Installing Prerequisites
 
-You need to install xampp/wamp/lamp.
+You need to install [XAMPP/WAMPP/LAMPP](https://www.apachefriends.org/download.html ), or any other PHP + MySQL Server.
+
 ### Clone Project
-You can simply go to document root `/opt/lampp/htdocs` and clone the project using `git` as:
+
+You can simply go to the document root (`/opt/lampp/htdocs/` for LAMPP) and clone the project using `git` as:
 
 ```bash
-cd /opt/lampp/htdocs
-git clone https://github.com/bharats97/epayments
+cd /opt/lampp/htdocs/
+git clone 'https://github.com/bharats97/epayments.git'
 ```
 
-### Start the server
+### Start the Server
 
-Start the apache server and MySQL server in xampp.
+Start the Apache and MySQL Server. For LAMPP, this can be done as follows:
 
+```bash
+sudo /opt/lampp/lampp startapache
+sudo /opt/lampp/lampp startmysql
+```
 
 ### Application Configuration
 
-Go to https://localhost/phpmyadmin and Run the following query to setup the database
+Go to [phpMyAdmin](http://localhost/phpmyadmin/) (for XAMPP/WAMPP/LAMPP) and run the following query to setup the database:
 
-```env
+```sql
 DROP DATABASE IF EXISTS `epayments`;
 
 CREATE DATABASE IF NOT EXISTS `epayments`;
@@ -66,23 +73,19 @@ CREATE TABLE IF NOT EXISTS `transactions` (
     INDEX (`sender_id`),
     INDEX (`receiver_id`)
 );
-
 ```
 
-Update the database credentials in app/connection/connect.php
+Update the database credentials in [app/connection/connect.php](./app/connection/connect.php).
 
+```php
+$connection = new mysqli('localhost', 'username', 'password', 'epayments');
 ```
-	$connection = new mysqli('localhost', 'username', 'password', 'epayments');
-```
 
-Make sure you change database configuration according to your credentials. Mostly, you'd need to change values for these variables:
+Make sure you change the database configuration according to your credentials. Mostly, you'd need to change values for these variables:
 
-- `username` - This is your mysql user.
-- `password` - This is your mysql password for that user.
+- `username` - This is your MySQL user.
+- `password` - This is your MySQL password for that user.
 
 That's pretty much it. You're done with the configuration.
 
-Now you can head to Sign Up page and create an account for youself
-```
-https://localhost/epayments/signup
-```
+Now you can head to the [Sign Up page](http://localhost/epayments/signup/) and create an account for yourself.
